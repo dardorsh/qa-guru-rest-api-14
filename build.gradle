@@ -56,3 +56,9 @@ tasks.withType(Test) {
         showStandardStreams = true
     }
 }
+
+task api_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("API")
+    }
+}
